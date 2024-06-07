@@ -79,7 +79,7 @@ class AsyncQueue {
   }
 
   Future<void> _runQueue() async {
-    if (_current == null) return;
+    if (_current != null) return;
 
     while (_queue.isNotEmpty) {
       _current = _queue.first;
